@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <color name="colorPrimary">#C5A868</color> -->
+    <color name="colorPrimary">#c1a565</color>
+    <color name="colorPrimaryDark">#c1a565</color>
+    <color name="colorAccent">#c1a565</color>
+    <color name="light_grey">#80DCDCDC</color>
+    <color name="light_black">#3c4143</color>
+    <color name="black">#000000</color>
+  <color name="bg_color">#F3F3F3</color>
+  <color name="white_color_opacity">#33FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="md_light_disabled">#61000000</color>
+    <color name="dim_foreground_dark">#bebebe</color>
+    <color name="dim_foreground_dark_disabled">#80bebebe</color>
+    <color name="gradient_grey_start">#77777777</color>
+    <color name="refresh_progress_1">@color/colorPrimary</color>
+    <color name="refresh_progress_2">@color/colorAccent</color>
+    <color name="refresh_progress_3">@color/colorPrimaryDark</color>
+    <color name="misc_file">#8A000000</color>
+    <color name="tab_indicator">#9B814A</color>
+    <color name="tab_unselected">#E0D2B2</color>
+    <color name="background_color">#f3f3f3</color>
+  <color name="toolbar_background">#c1a565</color>
+  <color name="color_medium">#626668</color>
+  <color name="button_bg_color">#9b814a</color>
+  <color name="grey">#d3d3d3</color>
+  <color name="grey_dark">#939393</color>
+  <color name="red">#FF0000</color>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bitvault.mediavault">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".application.MediaVaultController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        tools:node="replace">
+        <activity
+            android:name=".authentication.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".dashboard.LandingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".authentication.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authentication.AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dashboard.DirectoryDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <!-- screenSize is responsible to resume media when the orientation changes -->
+        <activity
+            android:name=".dashboard.PhotoViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/noAction">
+            <intent-filter>
+                <action android:name="com.android.camera.action.REVIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".croplibrary.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".croplibrary.CropMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.InfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.SelectWallet"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.UploadFile"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.SendingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.FailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.SuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".dashboard.RestoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".authentication.BackgroundAuthActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".eotwallet.SelectWalletType"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction" />
+        <activity
+            android:name=".multifileselector.MultiFileSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAction">
+
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="vnd.android.cursor.dir/image" />
+                <data android:mimeType="vnd.android.cursor.dir/video" />
+                <data android:mimeType="vnd.android.cursor.dir/audio" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.OPENABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="vnd.android.cursor.dir/image" />
+                <data android:mimeType="vnd.android.cursor.dir/video" />
+                <data android:mimeType="vnd.android.cursor.dir/audio" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="3d2ed02f14aef979ed74c23cf8263fe6627a86bb" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bitvault.mediavault.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+
+</manifest>

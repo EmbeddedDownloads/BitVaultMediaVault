@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding0dp"
+            android:layout_weight="0.45">
+
+            <include
+                android:id="@+id/toolbar_header"
+                layout="@layout/toolbar_header_below_layout" />
+
+
+            <com.bitvault.mediavault.utils.Roboto
+                android:id="@+id/txt_secure_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                android:gravity="center"
+                android:text="@string/select_wallet_to_upload_secure_file"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/size_16" />
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/select_wallet_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.55" />
+
+    </LinearLayout>
+</LinearLayout>

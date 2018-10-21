@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:id="@+id/parentRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5dp"
+            android:paddingLeft="@dimen/left_padding"
+            android:paddingRight="@dimen/right_padding"
+            android:paddingTop="@dimen/padding5dp">
+
+            <!--<ImageView
+                android:id="@+id/eotlogoImageView"
+                android:layout_width="@dimen/padding50dp"
+                android:layout_height="@dimen/padding50dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/eottype"
+                android:gravity="center"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/padding30dp" />-->
+            <com.bitvault.mediavault.utils.BitVaultFont
+                android:id="@+id/eotlogoImageView"
+                android:layout_width="@dimen/padding50dp"
+                android:layout_height="@dimen/padding50dp"
+                android:text="q"
+                android:gravity="center"
+                android:textColor="@color/toolbar_background"
+                android:textSize="@dimen/padding30dp"
+                android:layout_centerVertical="true" />
+
+            <com.bitvault.mediavault.utils.RobotoLight
+                android:id="@+id/eotWalletNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/padding5dp"
+                android:layout_marginStart="@dimen/padding_10dp"
+                android:layout_toRightOf="@+id/eotlogoImageView"
+                android:text="@string/eot_wallet_name"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/size_18" />
+
+
+            <LinearLayout
+                android:id="@+id/walletAvailableCoinLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <com.bitvault.mediavault.utils.Roboto
+                    android:id="@+id/walletAvailableCoinTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/size_16" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/parentRelativeLayout"
+            android:background="@color/bg_color" />
+
+
+    </RelativeLayout>

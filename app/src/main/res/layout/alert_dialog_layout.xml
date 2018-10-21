@@ -1,0 +1,74 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_10dp">
+
+        <com.bitvault.mediavault.utils.RobotoBold
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_20dp"
+            android:paddingTop="@dimen/padding_20dp"
+            android:paddingRight="@dimen/padding_20dp"
+            android:text="@string/confirmation_msg"
+            android:textColor="@color/light_black"
+            android:visibility="gone"
+            android:textSize="@dimen/size_18" />
+
+        <com.bitvault.mediavault.utils.RobotoLightItalic
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="@dimen/padding_20dp"
+            android:text="@string/confirmation_msg"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/size_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding40dp"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+            android:orientation="horizontal"
+            android:weightSum="2.1">
+
+            <com.bitvault.mediavault.utils.RobotoLightItalic
+                android:id="@+id/cancelButton"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_grey"
+                android:gravity="center"
+                android:padding="@dimen/padding5dp"
+                android:text="@string/no"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <com.bitvault.mediavault.utils.RobotoLightItalic
+                android:id="@+id/okButton"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/padding5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_bottom"
+                android:gravity="center"
+                android:padding="@dimen/padding5dp"
+                android:text="@string/yes"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+

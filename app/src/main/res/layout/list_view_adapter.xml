@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dir_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <com.bitvault.mediavault.helper.SquareLayout
+        android:id="@+id/image_squareLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imageThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+    </com.bitvault.mediavault.helper.SquareLayout>
+
+    <com.bitvault.mediavault.helper.SquareLayout
+        android:id="@+id/audioSquareLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/audioTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/time_top_margin"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/time_text_size" />
+
+        <ImageView
+            android:id="@+id/audio_icon"
+            android:layout_width="@dimen/audio_icon_w_h"
+            android:layout_height="@dimen/audio_icon_w_h"
+            android:layout_below="@+id/audioTime"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/audio_icon_top_margin"
+            android:background="@drawable/ic_headset_black_48dp" />
+    </com.bitvault.mediavault.helper.SquareLayout>
+
+    <com.bitvault.mediavault.helper.SquareLayout
+        android:id="@+id/videoSquareLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/videoThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@color/dim_foreground_dark"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/videoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/video_time_right_margin"
+            android:layout_marginTop="@dimen/video_time_top_margin"
+            android:layout_toLeftOf="@+id/videoIcon"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/time_text_size" />
+
+        <ImageView
+            android:id="@+id/videoIcon"
+            android:layout_width="@dimen/video_icon_w_h"
+            android:layout_height="@dimen/video_icon_w_h"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/video_icon_right_margin"
+            android:layout_marginTop="@dimen/video_icon_top_margin"
+            android:background="@drawable/ic_play_circle" />
+
+
+    </com.bitvault.mediavault.helper.SquareLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/squareLayout"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:padding="@dimen/directory_bottom_padding"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/file_name"
+            style="@style/font_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fileNameRightMargin"
+            android:ellipsize="end"
+            android:maxLines="2" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_selected"
+        android:layout_width="@dimen/selected_icon_w_h"
+        android:layout_height="@dimen/selected_icon_w_h"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/selected_icon_margin"
+        android:src="@drawable/ic_circle_selected_other"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:weightSum="0.8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding0dp"
+            android:layout_weight="0.4">
+
+            <include layout="@layout/toolbar_header_below_layout" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/padding0dp"
+            android:layout_weight="0.4">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/padding_10dp"
+                    android:layout_marginTop="@dimen/padding_10dp"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.bitvault.mediavault.utils.RobotoMedium
+                            style="@style/CustomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/right_padding"
+                            android:text="@string/wallet_" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/sendSpinner"
+                            style="@style/SpinnerStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:paddingEnd="@dimen/padding_10dp"
+                            android:paddingStart="@dimen/padding_10dp"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/light_black"
+                            android:visibility="gone" />
+
+                        <com.bitvault.mediavault.utils.RobotoMedium
+                            android:id="@+id/eotTextView"
+                            style="@style/CustomTextViewMedium"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/padding_10dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/right_padding"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.bitvault.mediavault.utils.RobotoMedium
+                            style="@style/CustomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/right_padding"
+                            android:text="@string/file_size" />
+
+                        <com.bitvault.mediavault.utils.Roboto
+                            android:id="@+id/file_size"
+                            style="@style/CustomTextViewMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/right_padding"
+                            android:paddingTop="@dimen/padding5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.bitvault.mediavault.utils.RobotoMedium
+                            style="@style/CustomTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/size"
+                            android:paddingStart="@dimen/right_padding"
+                            android:text="@string/file_uploading_charge" />
+
+                        <com.bitvault.mediavault.utils.Roboto
+                            android:id="@+id/transaction_fee"
+                            style="@style/CustomTextViewMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/right_padding"
+                            android:paddingTop="@dimen/padding5dp"
+                            android:text="@string/dummy_fee" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.bitvault.mediavault.utils.RobotoItalic
+            android:id="@+id/upload_button"
+            style="@style/bottomLayout"
+            android:layout_width="@dimen/padding0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bottom"
+            android:text="@string/upload_file" />
+
+        <com.bitvault.mediavault.utils.RobotoItalic
+            android:id="@+id/cancel"
+            style="@style/bottomLayout"
+            android:layout_width="@dimen/padding0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_grey"
+            android:text="@string/cancel"
+            android:textColor="@color/light_black" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_header_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

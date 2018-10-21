@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/activity_directory_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/moveToSecureVault"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/directories_grid_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/moveToSecureVault"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_view_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/ripple_bottom"
+        android:gravity="center"
+        android:text="@string/move_to_secure_media_vault"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/progressbarCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressbarCount"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible">
+
+        </ProgressBar>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/alert_title_top_margin"
+        android:gravity="center"
+        android:text="@string/overwrite_file"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/alert_title_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/alert_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alertTitle"
+        android:layout_marginLeft="@dimen/alert_left_margin"
+        android:layout_marginRight="@dimen/alert_right_margin"
+        android:layout_marginTop="@dimen/alert_top_margin"
+        android:gravity="center"
+        android:text="Are you sure want to overwrite file?"
+        android:textColor="@color/misc_file"
+        android:textSize="@dimen/alert_message_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alert_message"
+        android:layout_marginTop="@dimen/margin_top"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/alert_no_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aleert_no_btn_margin"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_grey"
+            android:gravity="center"
+            android:padding="@dimen/alert_no_btn_padding"
+            android:text="@string/no"
+            android:textColor="@color/white"
+            android:textSize="@dimen/alert_no_btn_text_size" />
+
+        <TextView
+            android:id="@+id/alert_yes_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/alert_yes_button_margin"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bottom"
+            android:gravity="center"
+            android:padding="@dimen/alert_yes_btn_padding"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="@dimen/alert_yes_btn_text_size" />
+    </LinearLayout>
+</RelativeLayout>

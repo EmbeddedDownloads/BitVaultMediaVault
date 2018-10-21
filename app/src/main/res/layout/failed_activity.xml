@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/secure_msg"
+                layout="@layout/toolbar_header_below_layout" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.bitvault.mediavault.utils.RobotoItalic
+            android:id="@+id/retryButton"
+            style="@style/bottomLayout"
+            android:layout_width="@dimen/padding0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bottom"
+            android:text="@string/retry" />
+
+        <com.bitvault.mediavault.utils.RobotoItalic
+            android:id="@+id/cancel"
+            style="@style/bottomLayout"
+            android:layout_width="@dimen/padding0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_grey"
+            android:text="@string/cancel"
+            android:textColor="@color/light_black" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base"></style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <!--For change the action bar 3 dot color as well as all dialogue color-->
+        <!--    <item name="colorControlNormal">@color/white</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyMaterialTheme.Base_new" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="windowActionBar">false</item>
+        <!--For change the action bar 3 dot color as well as all dialogue color-->
+        <!--    <item name="colorControlNormal">@color/white</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="noAction" parent="MyMaterialTheme.Base_new">
+
+    </style>
+
+    <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyCustomThemeDialog" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+    <!--show dilaog with animation-->
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+    <!--Text font size ,color -->
+    <style name="font" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="font_directory" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="toolbar_Custom_title" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="font_dialog" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="font_file" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_properties_dialog1" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="font_properties_dialog2" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ToolbarDarkOverflow" parent="MyMaterialTheme.Base">
+        <!-- android:textColorPrimary is the  color of the title text
+             in the Toolbar, in the Theme.AppCompat theme:  -->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!-- android:textColorPrimaryInverse is the  color of the title
+             text in the Toolbar, in the Theme.AppCompat.Light theme:  -->
+        <!-- <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item> -->
+
+        <!-- android:actionMenuTextColor is the color of the text of
+              action (menu) items in the Toolbar, at least in the
+              Theme.AppCompat theme.
+              For some reason, they already get the textColorPrimary
+              when running on API 21, but not on older versions of
+              Android, so this is only necessary to support older
+              Android versions.-->
+        <item name="actionMenuTextColor">@color/white</item>
+        <!-- android:textColorSecondary is the color of the menu
+             overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/white</item>
+
+        <!-- This would set the toolbar's background color,
+              but setting this also changes the popup menu's background,
+              even if we define popupTheme for our <Toolbar> -->
+        <!-- <item name="android:background">@color/color_primary</item> -->
+    </style>
+
+    <style name="AppTheme.Widget.ActionButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="textAllCaps">false</item>
+    </style>
+    <!--Style for popup window on main screen-->
+    <style name="Animations_popup">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="@android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="CustomTextView" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/size_18sp</item>
+        <item name="android:textColor">@color/light_black</item>
+
+    </style>
+
+    <style name="SpinnerStyle" parent="@android:style/Theme.Holo.Light">
+        <item name="android:dropDownListViewStyle">@style/mySpinnerStyle</item>
+    </style>
+
+    <style name="mySpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <item name="android:divider">#00ff00</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="CustomTextViewMedium" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/size_16</item>
+        <item name="android:textColor">@color/color_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="bottomLayout">
+        <item name="android:padding">@dimen/padding_10dp</item>
+        <item name="android:background">@color/button_bg_color</item>
+        <item name="android:textSize">@dimen/size_18</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

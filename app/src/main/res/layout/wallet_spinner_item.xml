@@ -1,0 +1,11 @@
+<com.bitvault.mediavault.utils.RobotoItalic xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SpinnerStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="left"
+    android:lines="1"
+    android:padding="@dimen/padding_10dp"
+    android:text="test"
+    android:textColor="@color/light_black"
+    android:textSize="@dimen/size_16" />

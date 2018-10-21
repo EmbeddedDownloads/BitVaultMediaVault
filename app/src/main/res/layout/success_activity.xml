@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding0dp"
+                    android:layout_marginTop="@dimen/padding_10dp"
+                    android:layout_weight="0.5">
+
+                    <include
+                        android:id="@+id/secure_msg"
+                        layout="@layout/toolbar_header_below_layout" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding0dp"
+                    android:layout_weight="0.5">
+
+                    <com.bitvault.mediavault.utils.Roboto
+                        android:id="@+id/bitCoinsText"
+                        style="@style/CustomTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding30dp"
+                        android:paddingLeft="@dimen/padding15dp"
+                        android:text="@string/bitcoinText"
+                        android:textColor="@color/light_black" />
+
+                    <com.bitvault.mediavault.utils.RobotoMedium
+                        android:id="@+id/transaction_txt"
+                        style="@style/CustomTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bitCoinsText"
+                        android:paddingBottom="@dimen/padding20dp"
+                        android:paddingStart="@dimen/padding15dp"
+                        android:text="@string/transactionText"
+                        android:textColor="@color/light_black" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_transaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/transaction_txt"
+                        android:paddingLeft="@dimen/padding15dp"
+                        android:paddingRight="@dimen/padding15dp">
+
+                        <TextView
+                            android:id="@+id/trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/qrcode"
+                            android:text=""
+                            android:textColor="@color/light_black" />
+
+
+                        <ImageView
+                            android:id="@+id/qrcode"
+                            android:layout_width="@dimen/padding50dp"
+                            android:layout_height="@dimen/padding50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/padding_10dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.bitvault.mediavault.utils.RobotoItalic
+                android:id="@+id/btn_done"
+                style="@style/bottomLayout"
+                android:layout_width="@dimen/padding0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_bottom"
+                android:text="@string/done" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

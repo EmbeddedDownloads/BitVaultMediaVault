@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/toolbar_background">
+
+        <com.bitvault.mediavault.utils.BitVaultFont
+            android:id="@+id/wallet_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ripple_back"
+            android:padding="@dimen/left_padding"
+            android:text="@string/character2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_text_size" />
+
+        <com.bitvault.mediavault.utils.RobotoBold
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/delete_icon"
+            android:layout_toRightOf="@+id/wallet_info_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_text_size" />
+
+        <com.bitvault.mediavault.utils.BitVaultFont
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/left_padding"
+            android:text="@string/delete"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="@dimen/all_text_size" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

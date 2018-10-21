@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bvp_right">RIGHT</string>
+    <string name="bvp_left">LEFT</string>
+    <string name="volume">Volume: %1$d</string>
+    <string name="brightness">Brightness: %1$d</string>
+    <string name="seekbar_progress_drawable">#9B814A</string>
+    <string name="seekbar_thumb">#E0D2B2</string>
+
+</resources>

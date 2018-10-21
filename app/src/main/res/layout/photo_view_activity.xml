@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/photo_view_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black">
+
+    <com.bitvault.mediavault.helper.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        android:windowActionBarOverlay="true"
+        android:theme="@style/ToolbarDarkOverflow"
+        app:popupTheme="@style/MyMaterialTheme.PopupOverlay"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+</RelativeLayout>
